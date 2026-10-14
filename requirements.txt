@@ -1,0 +1,5 @@
+# DeepStream Python bindings and GStreamer plugins
+# are provided by the target NVIDIA DeepStream environment.
+# Do not install them from this file.
+
+# No additional Python packages are required at this stage.

@@ -1,0 +1,8 @@
+# TEMPORARY PLACEHOLDER - NOT A VALID INFERENCE CONFIGURATION
+#
+# This file must be replaced before running the DeepStream pipeline.
+# The final configuration depends on the installed DeepStream version,
+# the selected YOLOv8n model artifacts, and the compatible inference
+# integration and parser.
+#
+# Do not run the application with this placeholder.
