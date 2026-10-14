@@ -45,7 +45,7 @@ def on_decode_pad_added(decodebin, pad, streammux):
     if not media_type.startswith("video/"):
         return
 
-    sink_pad = streammux.get_static_pad("sink_0")
+    sink_pad = streammux.request_pad_simple("sink_0")
     if not sink_pad:
         logger.error("Could not get streammux sink pad")
         return
@@ -92,7 +92,7 @@ def build_pipeline(input_path, config_path, output_path):
     source = make_element("filesrc", "video-source")
     decoder = make_element("decodebin", "video-decoder")
     streammux = make_element("nvstreammux", "stream-muxer")
-    pgie = make_element("nvinfer", "primary-inference")
+    pgie = make_element("nvinfer", "primary-inference") #capsfilter
     converter = make_element("nvvideoconvert", "video-converter")
     osd = make_element("nvdsosd", "onscreen-display")
     output_converter = make_element("nvvideoconvert", "output-converter")
@@ -131,7 +131,7 @@ def build_pipeline(input_path, config_path, output_path):
     ]
 
     for element in elements:
-        pipeline.add(element)
+        pipeline.add(element) #link errors
 
     if not source.link(decoder):
         raise RuntimeError("Could not link file source to decoder")
@@ -206,10 +206,10 @@ def main():
         logger.exception("Failed to construct DeepStream pipeline")
         return 1
 
-    loop = GLib.MainLoop()
-    bus = pipeline.get_bus()
-    bus.add_signal_watch()
-    bus.connect("message", on_bus_message, loop)
+    loop = GLib.MainLoop() #
+    bus = pipeline.get_bus() #
+    bus.add_signal_watch() #
+    bus.connect("message", on_bus_message, loop) #
 
     logger.info("Input: %s", input_path)
     logger.info("Inference config: %s", config_path)

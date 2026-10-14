@@ -1,13 +1,27 @@
+[property]
+gpu-id=0
+net-scale-factor=0.0039215697906911373
+model-color-format=0
+onnx-file=/home/kesavannanthagopal/Documents/interns/Charvitha/deepstream_basic_appp/yolov8n.onnx
+model-engine-file=/home/kesavannanthagopal/Documents/interns/Charvitha/deepstream_basic_appp/models/yolov8n.engine
+#int8-calib-file=calib.table
+labelfile-path=/home/kesavannanthagopal/Documents/interns/Charvitha/deepstream_basic_appp/labels.txt
+batch-size=1
+network-mode=0
+num-detected-classes=80
+interval=0
+gie-unique-id=1
+process-mode=1
+network-type=0
+cluster-mode=2
+maintain-aspect-ratio=1
+symmetric-padding=1
+#workspace-size=2000
+parse-bbox-func-name=NvDsInferParseYolo
+#parse-bbox-func-name=NvDsInferParseYoloCuda
+custom-lib-path=/tmp/DeepStream-Yolo/nvdsinfer_custom_impl_Yolo/libnvdsinfer_custom_impl_Yolo.so
 
-# Primary inference configuration
-#
-# This is a template, NOT a runnable inference configuration.
-#
-# Before enabling inference, configure:
-# - model-engine-file or supported model-file / ONNX settings
-# - infer-dims and network-type
-# - num-detected-classes
-# - labelfile-path
-# - output tensor parsing settings or custom YOLO parser
-#
-# Settings depend on the selected model and installed DeepStream version.
+[class-attrs-all]
+nms-iou-threshold=0.45
+pre-cluster-threshold=0.25
+topk=300
