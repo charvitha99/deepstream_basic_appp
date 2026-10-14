@@ -28,3 +28,6 @@ models/*.plan
 .idea/
 .DS_Store
 Thumbs.db
+# Local input videos
+input/*
+!input/.gitkeep
