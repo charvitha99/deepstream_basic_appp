@@ -1,0 +1,14 @@
+2026-10-14 13:14:15,427 | INFO | DeepStream Basic Video Analytics Application
+2026-10-14 13:14:15,427 | INFO | Project directory: C:\Users\CharvithaPeetla\Documents\deepstream_basic_app
+2026-10-14 13:14:33,149 | INFO | DeepStream Basic Video Analytics Application
+2026-10-14 13:14:33,150 | INFO | Project directory: C:\Users\CharvithaPeetla\Documents\deepstream_basic_app
+2026-10-14 13:14:33,176 | INFO | Input video: C:\Users\CharvithaPeetla\Documents\deepstream_basic_app\input\sample_video.mp4
+2026-10-14 13:14:33,176 | INFO | Inference configuration: C:\Users\CharvithaPeetla\Documents\deepstream_basic_app\config\config_infer_primary.txt
+2026-10-14 13:14:33,178 | INFO | Output video: C:\Users\CharvithaPeetla\Documents\deepstream_basic_app\output\processed_video.mp4
+2026-10-14 13:14:33,178 | WARNING | Pipeline execution is not implemented yet. DeepStream integration will be added after the target Ubuntu environment and model compatibility are verified.
+2026-10-14 13:17:13,515 | INFO | DeepStream Basic Video Analytics Application
+2026-10-14 13:17:13,516 | INFO | Project directory: C:\Users\CharvithaPeetla\Documents\deepstream_basic_app
+2026-10-14 13:17:13,540 | INFO | Input video: C:\Users\CharvithaPeetla\Documents\deepstream_basic_app\input\sample_video.mp4
+2026-10-14 13:17:13,540 | INFO | Inference configuration: C:\Users\CharvithaPeetla\Documents\deepstream_basic_app\config\config_infer_primary.txt
+2026-10-14 13:17:13,540 | INFO | Output video: C:\Users\CharvithaPeetla\Documents\deepstream_basic_app\output\processed_video.mp4
+2026-10-14 13:17:13,541 | ERROR | Pipeline execution is not implemented yet. No inference was performed and no output video was generated.

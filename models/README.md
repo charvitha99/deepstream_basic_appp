@@ -1,24 +1,22 @@
-# Model Directory
 
-This directory will contain the model artifacts required by the DeepStream application.
+# Models
 
-## Planned Model
+This directory stores model artifacts used by the DeepStream application.
 
-- Model family: YOLOv8
-- Model variant: YOLOv8n (nano)
-- Intended task: Object detection
+## Model requirements
 
-## Model Integration
+The model must be compatible with the installed NVIDIA DeepStream and
+TensorRT versions.
 
-The final model format and supporting files will be selected after checking the target Ubuntu computer's NVIDIA DeepStream version and the chosen YOLOv8 integration.
+For YOLOv8n integration, verify:
 
-Depending on the selected implementation, the required files may include:
+- YOLOv8n ONNX export compatibility
+- TensorRT engine generation on the target GPU
+- Correct YOLO output parser
+- Matching inference configuration and class labels
 
-- An exported model file, such as ONNX
-- A compatible custom parser library, if required
-- A DeepStream inference configuration
-- A generated TensorRT engine, if required by the chosen workflow
+Large model files and generated TensorRT engines should not normally
+be committed to Git.
 
-TensorRT engines may depend on the GPU and software environment. They must not be assumed to be portable between different computers.
-
-No model inference is claimed to be configured or tested yet.
+No model or GPU inference result is considered verified until the
+application has been tested on the target Ubuntu GPU machine.

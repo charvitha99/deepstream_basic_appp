@@ -1,8 +1,13 @@
-# TEMPORARY PLACEHOLDER - NOT A VALID INFERENCE CONFIGURATION
+
+# Primary inference configuration
 #
-# This file must be replaced before running the DeepStream pipeline.
-# The final configuration depends on the installed DeepStream version,
-# the selected YOLOv8n model artifacts, and the compatible inference
-# integration and parser.
+# This is a template, NOT a runnable inference configuration.
 #
-# Do not run the application with this placeholder.
+# Before enabling inference, configure:
+# - model-engine-file or supported model-file / ONNX settings
+# - infer-dims and network-type
+# - num-detected-classes
+# - labelfile-path
+# - output tensor parsing settings or custom YOLO parser
+#
+# Settings depend on the selected model and installed DeepStream version.
